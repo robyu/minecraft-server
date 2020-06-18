@@ -2,11 +2,11 @@
 
 based on https://github.com/itzg/docker-minecraft-server
 
-To build an image 'mcserver':
-> docker build -t mcserver .
+To build an image 'minecraft_ryu':
+> docker build -t minecraft_ryu .
 
 To run and listen to port 25565:
-> docker run -d -p 25565:25565 -name mc mcserver
+> docker run -d -p 25565:25565 --name mc minecraft_ryu
 
 To stop, restart:
 > docker stop mc
