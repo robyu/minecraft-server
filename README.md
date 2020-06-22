@@ -16,3 +16,7 @@ To look at logs:
 > docker logs -f mc
 
 For more detail, see README.md at https://github.com/itzg/docker-minecraft-server/blob/master/README.md 
+
+Download forge worldedit installer from https://www.curseforge.com/minecraft/mc-mods/worldedit/files.
+Put in ./mods folder.
+
