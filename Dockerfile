@@ -1,5 +1,5 @@
-FROM itzg/minecraft-server
-#FROM itzg/minecraft-server:adopt13
+#FROM itzg/minecraft-server
+FROM itzg/minecraft-server:adopt13
 #                          ^^^^^^^
 #                        use java version 13 latest update
 #                        using java 8 seems to crash ubuntu
@@ -19,6 +19,10 @@ ENV UID=$USER_ID
 ENV GID=$GROUP_ID
 
 # server config
+#######################\
+# need "fml.queryResults:confirm" to problem after removing mods
+# see https://github.com/itzg/docker-minecraft-server/blob/master/README.md
+ENV JVM_DD_OPTS=fml.queryResult:confirm  
 ENV TYPE=FORGE
 ENV EULA=TRUE
 ENV MODE=creative

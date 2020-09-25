@@ -1,5 +1,8 @@
 # Minecraft Docker 
 
+See chuyu server setup notes
+https://docs.google.com/document/d/1sbozYCfkXRUf3Eu0o-m_q_CWau2e6qRZuR1mxXQh0DM/edit
+
 based on https://github.com/itzg/docker-minecraft-server
 
 To build an image 'minecraft_ryu':
@@ -19,4 +22,3 @@ For more detail, see README.md at https://github.com/itzg/docker-minecraft-serve
 
 Download forge worldedit installer from https://www.curseforge.com/minecraft/mc-mods/worldedit/files.
 Put in ./mods folder.
-
