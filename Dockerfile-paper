@@ -1,0 +1,36 @@
+FROM itzg/minecraft-server
+
+MAINTAINER robert yu "robert.yu@gmail.com"
+
+#
+# match user id and group id with host
+#
+# see https://vsupalov.com/docker-shared-permissions/
+ARG USER_ID
+ARG GROUP_ID
+
+# dont run as user 1000
+ENV UID=$USER_ID
+ENV GID=$GROUP_ID
+
+# server config
+#######################\
+# need "fml.queryResults:confirm" to problem after removing mods
+# see https://github.com/itzg/docker-minecraft-server/blob/master/README.md
+ENV JVM_DD_OPTS=fml.queryResult:confirm  
+ENV TYPE=PAPER
+ENV EULA=TRUE
+ENV MODE=creative
+ENV MOTD="Chuyu Minecraft Paper"
+ENV DIFFICULTY=normal
+ENV LEVEL-TYPE=DEFAULT
+
+# allow all singleplayer cheats
+ENV OP-PERMISSION-LEVEL=2
+ENV ALLOW-CHEATS=TRUE
+ENV PUBLIC=TRUE
+ENV SERVER-NAME="Chuyu Minecraft Paper"
+ENV OPS=natnatmei,mrjetpacks,2kyu
+
+
+EXPOSE 25565
